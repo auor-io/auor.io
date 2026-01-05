@@ -1,0 +1,154 @@
+:root {
+	--color-primary-raw: 101, 33, 0;
+	--color-primary: rgb(var(--color-primary-raw));
+	--color-primary--20: rgba(var(--color-primary-raw), 0.2);
+	--color-secondary-raw: 34, 7, 0;
+	--color-secondary: rgb(var(--color-secondary-raw));
+	--color-secondary--20: rgba(var(--color-secondary-raw), 0.2);
+	--font-size-root: 16px;
+	/* These breakpoints cannot actually be used in @media queries. */
+	/* They are just here for remembering the settings. */
+	--breakpoint-sm: 40rem;
+	--breakpoint-md: 48rem;
+	--breakpoint-lg: 64rem;
+	--breakpoint-xl: 80rem;
+	--breakpoint-2xl: 96rem;
+}
+
+html {
+	/* The root font size, on which to base all other sizes with `rem` sizing. */
+	font-size: var(--font-size-root);
+}
+body {
+	background: linear-gradient(45deg, white, var(--color-primary--20));
+	font-family: "Noto Sans Mono", monospace;
+	min-height: 100vh;
+	margin: 0;
+	color: var(--color-primary);
+	font-size: 1rem;
+}
+a {
+	color: var(--color-secondary);
+}
+h1 {
+	font-size: 2rem;
+}
+h2 {
+	font-size: 1.5rem;
+}
+h3 {
+	font-size: 1.25rem;
+}
+header {
+	display: flex;
+	height: 4rem;
+	background: white;
+	margin: 1rem;
+	border-radius: 1rem;
+	box-shadow: inset -1px 0px 0.25rem #999;
+	border: 1px solid #eee;
+	padding: 0 1.5rem;
+}
+header #logo {
+	display: flex;
+	align-items: center;
+}
+header nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+}
+header nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+}
+header nav ul li a {
+	padding: 0.25rem 0.5rem;
+}
+main {
+	padding: 0 1rem 1rem 1rem;
+	text-align: center;
+}
+main section#hero {
+	margin: 6rem auto;
+}
+
+main section#use-cases {
+	display: grid;
+	grid-template-columns: repeat(1, minmax(calc(100% - 0.5rem), 1fr));
+	grid-auto-flow: row;
+	gap: 1rem;
+}
+@media (min-width: 64rem) {
+	main section#use-cases {
+		grid-template-columns: repeat(2, minmax(calc(50% - 0.5rem), 1fr));
+	}
+}
+
+main section#use-cases > div {
+	background: linear-gradient(45deg, var(--color-primary--20), white);
+	border: 1px solid white;
+	border-radius: 0.5rem;
+	box-shadow: inset -1px 0px 0.25rem #999;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+main section#use-cases > div h3 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+main section#comprehensive-apis {
+	margin-top: 4rem;
+}
+
+main section#comprehensive-apis > div {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(calc(50% - 0.5rem), 1fr));
+	grid-auto-flow: row;
+	gap: 1rem;
+}
+@media (min-width: 64rem) {
+	main section#comprehensive-apis > div {
+		grid-template-columns: repeat(3, minmax(calc(33% - 0.5rem), 1fr));
+	}
+}
+
+main section#comprehensive-apis > div > div {
+	background: linear-gradient(45deg, var(--color-primary--20), white);
+	border: 1px solid white;
+	border-radius: 0.5rem;
+	box-shadow: inset -1px 0px 0.25rem #999;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+main section#comprehensive-apis > div > div h3 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+footer {
+	margin: 4rem 0 2rem;
+	text-align: center;
+}
+
+.material-icons-two-tone {
+	color: transparent;
+	background: var(--color-primary);
+	background-clip: text;
+	-webkit-background-clip: text;
+}

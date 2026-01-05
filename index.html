@@ -1,9 +1,125 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>auor.io - The world's biggest x402 API collection</title>
+		<title>auor.io - The most comprehensive x402 API collection</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet" />
+		<link rel="stylesheet" href="./stylesheet.css" />
 	</head>
 	<body>
-		<h1>auor.io</h1>
+		<header>
+			<div id="logo">
+				<img src="/images/auor.io-logo-96x96.webp" alt="auor.io" width="48" height="48" />
+			</div>
+			<nav>
+				<ul>
+					<li>
+						<a href="https://google.com">Docs</a>
+					</li>
+					<li>
+						<a href="https://github.com/auor-io">GitHub</a>
+					</li>
+				</ul>
+			</nav>
+			<div style="width: 48px;"></div>
+		</header>
+		<main>
+			<section id="hero">
+				<h1>auor.io</h1>
+				<p>The most comprehensive <a href="https://www.x402.org/">x402</a> API collection</p>
+				<p>
+					No more
+					<span id="benefits">
+						<span>API keys</span>
+						<span>managing accounts</span>
+						<span>monthly fees</span>
+						<span>unused credits</span>
+					</span>
+					<strong><span id="benefit"></span></strong>
+				</p>
+			</section>
+
+			<section id="use-cases">
+				<div>
+					<h3>
+						<span class="material-icons-two-tone">
+							auto_awesome
+						</span>
+						Easy AI integration
+					</h3>
+					<p>Enabling AI agents to effortlessly fetch static API information, or make stateless API calls.</p>
+				</div>
+
+				<div>
+					<h3>
+						<span class="material-icons-two-tone">
+							hub
+						</span>
+						No hassle
+					</h3>
+					<p>Multiple APIs. None of the hassle. No more setting up multiple accounts with subscriptions. No more and juggling multiple API keys.</p>
+				</div>
+			</section>
+
+			<section id="comprehensive-apis">
+				<h2>Comprehensive APIs</h2>
+
+				<div>
+					<div>
+						<h3>
+							<span class="material-icons-two-tone">
+								wb_sunny
+							</span>
+							Weather
+						</h3>
+						<p>Current, future, and historical weather information.</p>
+					</div>
+	
+					<div>
+						<h3>
+							<span class="material-icons-two-tone">
+								beach_access
+							</span>
+							Holidays
+						</h3>
+						<p>Information about public- and school holidays.</p>
+					</div>
+					
+					<div>
+						<h3>
+							<span class="material-icons-two-tone">
+								map
+							</span>
+							Maps
+						</h3>
+						<p>Geolocation information, and more mapping endpoints to come.</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<img src="/images/auor.io-logo-96x96.webp" alt="auor.io" width="48" height="48" />
+		</footer>
+
+		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+		<script>
+			new Typed("#benefit", {
+				stringsElement: "#benefits",
+				typeSpeed: 60,
+				backSpeed: 30,
+				loop: true,
+				smartBackspace: false,
+			});
+		</script>
 	</body>
 </html>

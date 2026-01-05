@@ -1,0 +1,19 @@
+networks:
+  auor-io-network:
+    driver: bridge
+
+services:
+  app:
+    build: ./
+    develop:
+      watch:
+        - action: sync
+          ignore:
+            - Dockerfile
+            - docker-compose.yml
+          path: ./
+          target: /usr/share/nginx/html
+    networks:
+      - auor-io-network
+    ports:
+      - "4021:80"
